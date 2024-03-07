@@ -1,1 +1,0 @@
-# sia-konomic_test_playwright
