@@ -21,7 +21,7 @@
 
 1. Клонировать репозиторий
 ```
-git clone https://github.com/waldemirrr/sia-konomic_test_playwright.git)https://github.com/waldemirrr/sia-konomic_test_playwright.git
+git clone https://github.com/waldemirrr/sia-konomic_test_playwright.git
 cd sia-konomic_test_playwright
 ```
 2. Создать виртуальную среду и активировать её
@@ -29,5 +29,13 @@ cd sia-konomic_test_playwright
 python -m venv venv
 source venv/bin/activate  # для UNIX/Linux
 venv\Scripts\activate  # для Windows
+```
+3.Установить зависимости:
+```
+pip install -r requirements.txt
+```
+4. Запустить тесты
+```
+pytest -v -s
 ```
 
