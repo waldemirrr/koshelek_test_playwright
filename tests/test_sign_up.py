@@ -11,7 +11,7 @@ sign_up_test_data = [tuple(my_dict.values()) for my_dict in sign_up_data]
 @pytest.mark.parametrize('test_data', sign_up_test_data)
 def test_negative_sign_up_scenarios(sign_up_page: SignUpPage, test_data) -> None:
     # Распаковка тестовых данных из параметризации
-    username, username_error, email, email_error, password, is_password_correct, password_error, \
+    test_id, username, username_error, email, email_error, password, is_password_correct, password_error, \
         referral_code, referral_code_message, click_checkbox, checkbox_status, \
         submit_form, is_submit_button_disabled = test_data
 

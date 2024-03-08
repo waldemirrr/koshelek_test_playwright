@@ -7,24 +7,20 @@ class SignUpPage:
 
     def __init__(self, page: Page) -> None:
         self.page = page
-        self.username_field = self.page.locator('div[data-wi="user-name"] input:first-of-type')
-        self.email_field = self.page.locator('div[data-wi="identificator"] input:first-of-type')
-        self.password_field = self.page.locator('div[data-wi="password"] input:first-of-type')
-        self.referral_code_field = self.page.locator('div[data-wi="referral"] input:first-of-type')
-        self.checkbox = self.page.locator('div[data-wi="user-agreement"] input:first-of-type')
-        self.submit_button = self.page.locator('div[data-wi="submit-button"] button')
-
-        self.username_error_message = self.page.locator('div[data-wi="user-name"]').locator('.v-text-field__details')
-        self.email_error_message = self.page.locator('div[data-wi="identificator"]').locator('.v-text-field__details')
-        self.password_error_message = self.page.locator('div[data-wi="password"]').locator('.v-text-field__details')
-        self.referral_code_error_message = self.page.locator('div[data-wi="referral"]').locator('.v-text-field__details')
-        self.checkbox_status = self.page.locator('div[class="k-checkbox-auth"] use')
+        self.username_field = self.page.locator('[data-wi="user-name"]').locator('input')
+        self.email_field = self.page.locator('[data-wi="identificator"]').locator('input')
+        self.password_field = self.page.locator('[data-wi="password"]').locator('input')
+        self.referral_code_field = self.page.locator('[data-wi="referral"]').locator('input')
+        self.checkbox = self.page.locator('[data-wi="user-agreement"]').locator('input')
+        self.submit_button = self.page.locator('[data-wi="submit-button"]').locator('button')
+        self.username_error_message = self.page.locator('[data-wi="user-name"]').locator('.v-text-field__details')
+        self.email_error_message = self.page.locator('[data-wi="identificator"]').locator('.v-text-field__details')
+        self.password_error_message = self.page.locator('[data-wi="password"]').locator('.v-text-field__details')
+        self.referral_code_error_message = self.page.locator('[data-wi="referral"]').locator('.v-text-field__details')
+        self.checkbox_status = self.page.locator('[class="k-checkbox-auth"]').locator('use')
 
     def navigate_to_page(self) -> None:
         self.page.goto(self.URL)
-
-    def clear_focus(self):
-        self.page.mouse.click(0, 0)
 
     def fill_username_form_field(self, value: str) -> None:
         self.username_field.fill(value)
@@ -32,7 +28,7 @@ class SignUpPage:
     def fill_email_form_field(self, value: str) -> None:
         self.email_field.fill(value)
 
-    def fill_password_form_field(self, value:str) -> None:
+    def fill_password_form_field(self, value: str) -> None:
         self.password_field.fill(value)
 
     def fill_referral_code_field(self, values:str) -> None:
@@ -46,10 +42,10 @@ class SignUpPage:
         if value:
             self.submit_button.click()
 
-    def check_username_error_message(self, value) -> None:
+    def check_username_error_message(self, value: str) -> None:
         expect(self.username_error_message).to_contain_text(value)
 
-    def check_email_error_message(self, value) -> None:
+    def check_email_error_message(self, value: str) -> None:
         expect(self.email_error_message).to_contain_text(value)
 
     def check_password_message(self, is_password_correct: bool, value: str) -> None:
@@ -59,7 +55,7 @@ class SignUpPage:
         else:
             expect(self.password_error_message).to_contain_text(value)
 
-    def check_referral_code_message(self, value) -> None:
+    def check_referral_code_message(self, value: str) -> None:
         expect(self.referral_code_error_message).to_contain_text(value)
 
     def check_checkbox_status(self, value: str) -> None:
