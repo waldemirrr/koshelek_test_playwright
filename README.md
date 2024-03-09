@@ -20,7 +20,7 @@
 
 ## Установка и запуск
 
-Перед тем как продолжить нужно иметь установленным [Python](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe) и [git](https://git-scm.com/download/win)
+Перед тем как продолжить нужно иметь установленным [Python](https://www.python.org/) и [git](https://git-scm.com/)
 
 1. Клонировать репозиторий
 ```
