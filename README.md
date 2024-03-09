@@ -36,6 +36,7 @@ venv\Scripts\activate  # для Windows
 3.Установить зависимости:
 ```
 pip install -r requirements.txt
+playwright install
 ```
 4. Запустить тесты
 ```
