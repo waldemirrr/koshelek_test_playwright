@@ -3,7 +3,7 @@ error_messages = {
     'correct_referral_code_message': 'Реферальный код дает скидку',
     'referral_incorrect_link_format': 'Неверный формат ссылки',
     'username': 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы',
-    'email': 'Формат e-mail: somebody@somewhere.ru',
+    'email': ' Формат e-mail: username@test.ru',
     'password_too_short': 'Пароль должен содержать минимум 8 символов',
     'password_general': 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры',
 }
