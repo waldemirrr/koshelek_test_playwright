@@ -1,4 +1,4 @@
-# Тестовое задание для SIA Konomic
+# Тестовое задание для Koshelek
 
 ## Обзор
 
@@ -24,8 +24,8 @@
 
 1. Клонировать репозиторий
 ```
-git clone https://github.com/waldemirrr/sia-konomic_test_playwright.git
-cd sia-konomic_test_playwright
+git clone https://github.com/waldemirrr/koshelek_test_playwright.git
+cd koshelek_test_playwright
 ```
 2. Создать виртуальную среду и активировать её
 ```
