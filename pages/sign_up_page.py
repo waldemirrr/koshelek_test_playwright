@@ -3,7 +3,7 @@ import re
 
 
 class SignUpPage:
-    URL = 'https://exchange.konomik.com/authorization/signup'
+    URL = 'https://koshelek.ru/authorization/signup'
 
     def __init__(self, page: Page) -> None:
         self.page = page
